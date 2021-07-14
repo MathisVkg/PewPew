@@ -7,20 +7,50 @@ ctx.lineWidth = "5";
 ctx.strokeStyle = "rgb(54, 95, 156)";
 ctx.canvas.width  = window.innerWidth/1.5;
 ctx.canvas.height = window.innerHeight/1.5;
+var yval = 550;
+var xval = (canvas.width/2) - 35;
+console.log('xval: ', xval);
+ctx.drawImage(image, xval, yval, image.width = 70, image.height = 70);
 
-ctx.drawImage(image, (canvas.width/2) - 35, 550, image.width = 70, image.height = 70);
-
-
-
-
-
-
-
+var speed = 5;
+var leftPointer, rightPointer;
+document.addEventListener('keydown', function(event) {
+    if(event.keyCode === 32) {
+        //space
+        console.log("shoot");
+    }
+    if(event.keyCode === 37) {
+        //left
+        // leftPointer = setInterval(function () {
+        xval -= 10;
+        console.log('xval: ', xval);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(image,xval,yval, image.width = 70, image.height = 70);
+        // }, speed)
+    }
+    if(event.keyCode === 39) {
+        //right
+        // rightPointer = setInterval(function () {
+        xval += 10;
+        console.log('xval: ', xval);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(image,xval,yval, image.width = 70, image.height = 70);
+        // }, speed)
+    }
+}, true);
+document.addEventListener('keyup', function(event) {
+    if (event.keyCode == 37) {
+        clearInterval(leftPointer);
+    }
+    else if (event.keyCode == 39) {
+        clearInterval(rightPointer)
+    }
+}, true);
 
 // document.getElementById("buttonStart").addEventListener("click", () => {
-    // })
-    // document.getElementById("buttonReset").addEventListener("click", () => {
-        // })
+// })
+// document.getElementById("buttonReset").addEventListener("click", () => {
+// })
         
         
 // ctx.beginPath();

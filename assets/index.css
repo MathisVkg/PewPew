@@ -1,6 +1,6 @@
 body {
   background-color: #303030;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   margin: 0;
 }
 
@@ -15,11 +15,11 @@ header h1 {
   color: white;
   font-size: 77px;
   font-weight: 900;
-  background-color: #4285F4;
+  background-color: #46b59b;
   padding-top: 25px;
   height: 78px;
-  font-family: 'Niconne', cursive;
-  text-shadow: 3px 2px 0px #eb452b, 6px 4px 0px #efa032, 9px 6px 0px #46b59b, 12px 9px 0px #017e7f, 15px 12px 0px #052939, 18px 15px 0px #4285F4;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 3px 2px 2px #eb452b, 6px 4px 2px #efa032, 9px 6px 2px #4285F4, 12px 8px 2px #052939, 15px 9px 2px #017e7f, 18px 12px 2px #46b59b;
 }
 
 header .copyright {
@@ -34,6 +34,13 @@ header .copyright:hover {
   font-size: 18px;
 }
 
+.control {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  text-shadow: 2px 2px 2px #052939;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,8 +53,8 @@ header .copyright:hover {
 
 .container canvas {
   background-color: #f6f6f6;
-  -webkit-box-shadow: 2px 2px 2px #3b6cb9;
-          box-shadow: 2px 2px 2px #3b6cb9;
+  -webkit-box-shadow: 2px 2px 2px #2c7e6b;
+          box-shadow: 2px 2px 2px #2c7e6b;
   border-radius: 5px;
 }
 
@@ -62,9 +69,11 @@ header .copyright:hover {
 }
 
 .buttonPlay .buttonUp {
+  font-family: 'Orbitron', sans-serif;
   color: white;
+  text-shadow: 2px 2px 2px #052939;
   border: unset;
-  background-color: #4285F4;
+  background-color: #46b59b;
   font-size: 20px;
   margin-right: 10px;
   padding: 12px;
@@ -72,8 +81,8 @@ header .copyright:hover {
   border-radius: 5px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: inset -3px -3px 8px #315ca0;
-          box-shadow: inset -3px -3px 8px #315ca0;
+  -webkit-box-shadow: inset -3px -3px 8px #2c7e6b;
+          box-shadow: inset -3px -3px 8px #2c7e6b;
 }
 
 .buttonPlay .buttonUp:hover {
@@ -84,9 +93,11 @@ header .copyright:hover {
 }
 
 .buttonPlay .buttonDown {
+  font-family: 'Orbitron', sans-serif;
   color: white;
+  text-shadow: 2px 2px 2px #052939;
   border: unset;
-  background-color: #4285F4;
+  background-color: #46b59b;
   font-size: 20px;
   margin-right: 10px;
   padding: 12px;
@@ -94,8 +105,8 @@ header .copyright:hover {
   border-radius: 5px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: inset -3px -3px 8px #315ca0;
-          box-shadow: inset -3px -3px 8px #315ca0;
+  -webkit-box-shadow: inset -3px -3px 8px #2c7e6b;
+          box-shadow: inset -3px -3px 8px #2c7e6b;
 }
 
 .buttonPlay .buttonDown:hover {
@@ -107,9 +118,10 @@ header .copyright:hover {
 
 .buttonPlay .target {
   color: white;
+  text-shadow: 2px 2px 2px #052939;
   text-align: center;
   border: unset;
-  background-color: #4285F4;
+  background-color: #46b59b;
   font-size: 20px;
   margin-left: 8%;
   width: 250px;
@@ -117,7 +129,7 @@ header .copyright:hover {
   border-radius: 5px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: inset -3px -3px 8px #315ca0;
-          box-shadow: inset -3px -3px 8px #315ca0;
+  -webkit-box-shadow: inset -3px -3px 8px #2c7e6b;
+          box-shadow: inset -3px -3px 8px #2c7e6b;
 }
 /*# sourceMappingURL=index.css.map */

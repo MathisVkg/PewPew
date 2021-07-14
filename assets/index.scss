@@ -1,7 +1,7 @@
 
 body {
     background-color: #303030;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
 }
 
@@ -15,16 +15,17 @@ header {
         color: white;
         font-size: 77px;  
         font-weight: 900;
-        background-color: #4285F4;
+        background-color: #46b59b;
         padding-top: 25px;
         height: 78px;
-        font-family: 'Niconne', cursive;
-        text-shadow: 3px 2px 0px #eb452b, 
-                      6px 4px 0px #efa032, 
-                      9px 6px 0px #46b59b, 
-                      12px 9px 0px #017e7f, 
-                      15px 12px 0px #052939,
-                      18px 15px 0px #4285F4, 
+        // font-family: 'Niconne', cursive;
+        font-family: 'Orbitron', sans-serif;
+        text-shadow: 3px 2px 2px #eb452b, 
+                      6px 4px 2px #efa032, 
+                      9px 6px 2px #4285F4, 
+                      12px 8px 2px #052939,
+                      15px 9px 2px #017e7f, 
+                      18px 12px 2px #46b59b, 
     }
     .copyright {
         text-decoration: none;
@@ -37,6 +38,13 @@ header {
     }
 }
 
+.control {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    text-shadow: 2px 2px 2px #052939;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -44,7 +52,7 @@ header {
     canvas {
         // background-color: rgb(130, 168, 226);
         background-color: rgb(246, 246, 246);
-        box-shadow: 2px 2px 2px #3b6cb9;
+        box-shadow: 2px 2px 2px #2c7e6b;
         border-radius: 5px;
     }
 }
@@ -54,32 +62,36 @@ header {
     justify-content: center;
     margin-top: 20px;
     .buttonUp {
+        font-family: 'Orbitron', sans-serif;
         color: white;
+        text-shadow: 2px 2px 2px #052939;
         border: unset;
-        background-color: #4285F4; 
+        background-color: #46b59b; 
         font-size: 20px;
         margin-right: 10px;
         padding: 12px;
         width: 350px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        box-shadow: inset -3px -3px 8px #315ca0;
+        box-shadow: inset -3px -3px 8px #2c7e6b;
         &:hover {
             box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
             transform: translateY(-5px);
         }
     }
     .buttonDown {
+        font-family: 'Orbitron', sans-serif;
         color: white;
+        text-shadow: 2px 2px 2px #052939;
         border: unset;
-        background-color: #4285F4;
+        background-color: #46b59b;
         font-size: 20px;
         margin-right: 10px;
         padding: 12px;
         width: 350px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        box-shadow: inset -3px -3px 8px #315ca0;
+        box-shadow: inset -3px -3px 8px #2c7e6b;
         &:hover {
             box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
             transform: translateY(-5px);
@@ -87,19 +99,16 @@ header {
     }
     .target {
         color: white;
+        text-shadow: 2px 2px 2px #052939;
         text-align: center;
         border: unset;
-        background-color: #4285F4;
+        background-color: #46b59b;
         font-size: 20px;
         margin-left: 8%;
         width: 250px;
         padding: 12px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        box-shadow: inset -3px -3px 8px #315ca0;
-        // &:hover {
-        //     box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
-        //     transform: translateY(-5px);
-        // }
+        box-shadow: inset -3px -3px 8px #2c7e6b;
     }
 }
