@@ -22,8 +22,10 @@ document.addEventListener('keydown', function(event) {
     if(event.keyCode === 37) {
         //left
         // leftPointer = setInterval(function () {
+        if(xval < 13) {
+            xval = 13;
+        }
         xval -= 10;
-        console.log('xval: ', xval);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(image,xval,yval, image.width = 70, image.height = 70);
         // }, speed)
@@ -31,8 +33,10 @@ document.addEventListener('keydown', function(event) {
     if(event.keyCode === 39) {
         //right
         // rightPointer = setInterval(function () {
+        if(xval > canvas.width - 90) {
+            xval = canvas.width -90;
+        }
         xval += 10;
-        console.log('xval: ', xval);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(image,xval,yval, image.width = 70, image.height = 70);
         // }, speed)
