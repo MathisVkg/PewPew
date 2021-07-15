@@ -1,5 +1,5 @@
 body {
-  background-color: #303030;
+  background-color: #161A1D;
   font-family: 'Orbitron', sans-serif;
   margin: 0;
 }
@@ -15,12 +15,13 @@ header h1 {
   color: white;
   font-size: 77px;
   font-weight: 900;
-  background-image: url(assets/img/backgif.gif);
-  background-repeat: no-repeat;
+  background-color: #E5383B;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
   padding-top: 25px;
   height: 78px;
   font-family: 'Orbitron', sans-serif;
-  text-shadow: 3px 2px 2px #fa71fe, 6px 4px 2px #9918e1;
+  text-shadow: 1px 1px 0px #dfdfdf, 2px 2px 0px #dfdfdf, 3px 3px 0px #dfdfdf, 4px 4px 0px #dfdfdf, 5px 5px 0px #dfdfdf, 6px 6px 0px #dfdfdf, 7px 7px 0px #E5383B, 8px 8px 0px #E5383B, 9px 9px 0px #c73133, 10px 10px 0px #c73133, 11px 11px 0px #c73133, 12px 12px 0px #c73133, 13px 13px 0px #c73133;
 }
 
 header .copyright {
@@ -28,18 +29,12 @@ header .copyright {
   color: white;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
+  font-size: 12px;
 }
 
 header .copyright:hover {
-  color: #315ca0;
-  font-size: 18px;
-}
-
-.control {
-  text-align: center;
-  color: white;
-  font-size: 17px;
-  text-shadow: 2px 2px 2px #052939;
+  color: #BA181B;
+  font-size: 15px;
 }
 
 .container {
@@ -49,13 +44,16 @@ header .copyright:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 2%;
 }
 
 .container canvas {
   background-color: #f6f6f6;
-  -webkit-box-shadow: 2px 2px 2px #2c7e6b;
-          box-shadow: 2px 2px 2px #2c7e6b;
+  -webkit-box-shadow: 2px 2px 7px #E5383B;
+          box-shadow: 2px 2px 7px #E5383B;
   border-radius: 5px;
 }
 
@@ -66,29 +64,38 @@ header .copyright:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 2%;
+  width: 220px;
+  font-size: 15px;
+}
+
+.buttonPlay .control {
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  text-shadow: 1px 1px 0px #adadad;
 }
 
 .buttonPlay .buttonUp {
   font-family: 'Orbitron', sans-serif;
   color: white;
-  text-shadow: 2px 2px 2px #052939;
+  text-shadow: 1px 1px 0px #adadad;
   border: unset;
-  background-color: #46b59b;
-  font-size: 20px;
-  margin-right: 10px;
+  background-color: #E5383B;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+  font-size: 15px;
   padding: 12px;
-  width: 350px;
   border-radius: 5px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: inset -3px -3px 8px #2c7e6b;
-          box-shadow: inset -3px -3px 8px #2c7e6b;
 }
 
 .buttonPlay .buttonUp:hover {
-  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
@@ -96,41 +103,33 @@ header .copyright:hover {
 .buttonPlay .buttonDown {
   font-family: 'Orbitron', sans-serif;
   color: white;
-  text-shadow: 2px 2px 2px #052939;
+  text-shadow: 1px 1px 0px #adadad;
   border: unset;
-  background-color: #46b59b;
-  font-size: 20px;
-  margin-right: 10px;
+  background-color: #E5383B;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+  font-size: 15px;
+  margin-top: 8%;
   padding: 12px;
-  width: 350px;
   border-radius: 5px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: inset -3px -3px 8px #2c7e6b;
-          box-shadow: inset -3px -3px 8px #2c7e6b;
 }
 
 .buttonPlay .buttonDown:hover {
-  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
 .buttonPlay .target {
   color: white;
-  text-shadow: 2px 2px 2px #052939;
+  text-shadow: 1px 1px 0px #adadad;
   text-align: center;
   border: unset;
-  background-color: #46b59b;
-  font-size: 20px;
-  margin-left: 8%;
-  width: 250px;
+  margin-top: 6%;
   padding: 12px;
   border-radius: 5px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-box-shadow: inset -3px -3px 8px #2c7e6b;
-          box-shadow: inset -3px -3px 8px #2c7e6b;
 }
 /*# sourceMappingURL=index.css.map */

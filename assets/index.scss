@@ -1,6 +1,6 @@
 
 body {
-    background-color: #303030;
+    background-color: #161A1D;
     font-family: 'Orbitron', sans-serif;
     margin: 0;
 }
@@ -15,47 +15,51 @@ header {
         color: white;
         font-size: 77px;  
         font-weight: 900;
-        // background-color: rgb(153, 24, 225);
-        background-image: url(assets/img/backgif.gif);
-        background-repeat: no-repeat;
+        background-color: #E5383B;
+        box-shadow: 1px 1px 0px #c73133,
+                    2px 2px 0px #c73133,
+                    3px 3px 0px #c73133,
+                    4px 4px 0px #c73133,
+                    5px 5px 0px #c73133;
         padding-top: 25px;
         height: 78px;
         // font-family: 'Niconne', cursive;
         font-family: 'Orbitron', sans-serif;
-        text-shadow: 3px 2px 2px rgb(250, 113, 254), 
-                     6px 4px 2px rgb(153, 24, 225), 
-                    //   6px 4px 2px #efa032, 
-                    //   9px 6px 2px #4285F4, 
-                    //   12px 8px 2px #052939,
-                    //   15px 9px 2px #017e7f, 
-                    //   18px 12px 2px #46b59b, 
-    }
-    .copyright {
+        text-shadow:1px 1px 0px rgb(223, 223, 223),
+                    2px 2px 0px rgb(223, 223, 223),
+                    3px 3px 0px rgb(223, 223, 223),
+                    4px 4px 0px rgb(223, 223, 223),
+                    5px 5px 0px rgb(223, 223, 223),
+                    6px 6px 0px rgb(223, 223, 223),
+                    7px 7px 0px #E5383B,
+                    8px 8px 0px #E5383B,
+                    9px 9px 0px #c73133,
+                    10px 10px 0px #c73133,
+                    11px 11px 0px #c73133,
+                    12px 12px 0px #c73133,
+                    13px 13px 0px #c73133,
+                }
+        .copyright {
         text-decoration: none;
         color: white;
         transition: 0.5s ease-in-out;
+        font-size: 12px;
         &:hover {
-            color: #315ca0;
-            font-size: 18px;
+            color: #BA181B;
+            font-size: 15px;
         }
     }
-}
-
-.control {
-    text-align: center;
-    color: white;
-    font-size: 17px;
-    text-shadow: 2px 2px 2px #052939;
 }
 
 .container {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     margin-top: 2%;
     canvas {
         // background-color: rgb(130, 168, 226);
         background-color: rgb(246, 246, 246);
-        box-shadow: 2px 2px 2px #2c7e6b;
+        box-shadow: 2px 2px 7px #E5383B;
         border-radius: 5px;
     }
 }
@@ -63,55 +67,64 @@ header {
 .buttonPlay {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    flex-direction: column;
+    margin-right: 2%;
+    width: 220px;
+    font-size: 15px;
+    .control {
+        text-align: center;
+        color: white;
+        font-size: 17px;
+        text-shadow:1px 1px 0px rgb(173, 173, 173);  
+    }
     .buttonUp {
         font-family: 'Orbitron', sans-serif;
         color: white;
-        text-shadow: 2px 2px 2px #052939;
-        border: unset;
-        background-color: #46b59b; 
-        font-size: 20px;
-        margin-right: 10px;
+        text-shadow:1px 1px 0px rgb(173, 173, 173);        border: unset;
+        background-color: #E5383B; 
+        box-shadow: 1px 1px 0px #c73133,
+                    2px 2px 0px #c73133,
+                    3px 3px 0px #c73133,
+                    4px 4px 0px #c73133,
+                    5px 5px 0px #c73133;
+        font-size: 15px;
         padding: 12px;
-        width: 350px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        box-shadow: inset -3px -3px 8px #2c7e6b;
         &:hover {
-            box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
             transform: translateY(-5px);
         }
     }
     .buttonDown {
         font-family: 'Orbitron', sans-serif;
         color: white;
-        text-shadow: 2px 2px 2px #052939;
+        text-shadow:1px 1px 0px rgb(173, 173, 173);  
         border: unset;
-        background-color: #46b59b;
-        font-size: 20px;
-        margin-right: 10px;
+        background-color: #E5383B;
+        box-shadow: 1px 1px 0px #c73133,
+                    2px 2px 0px #c73133,
+                    3px 3px 0px #c73133,
+                    4px 4px 0px #c73133,
+                    5px 5px 0px #c73133;
+        font-size: 15px;
+        margin-top: 8%;
         padding: 12px;
-        width: 350px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        box-shadow: inset -3px -3px 8px #2c7e6b;
         &:hover {
-            box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.5);
             transform: translateY(-5px);
         }
     }
     .target {
         color: white;
-        text-shadow: 2px 2px 2px #052939;
+        text-shadow:1px 1px 0px rgb(173, 173, 173);  
         text-align: center;
         border: unset;
-        background-color: #46b59b;
-        font-size: 20px;
-        margin-left: 8%;
-        width: 250px;
+        margin-top: 6%;
         padding: 12px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        box-shadow: inset -3px -3px 8px #2c7e6b;
+        // background-color: #E5383B;
+        // box-shadow: inset -3px -3px 8px #BA181B;
     }
 }

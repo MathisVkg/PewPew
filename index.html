@@ -19,15 +19,23 @@
         <a href="https://github.com/MathisVkg" class="copyright">©Vkg Mathis</a>
     </header>
     <div class="container">
-        <canvas id="game"></canvas>
-        <img id="source" src="assets/img/testpng.png" style="display: none;">
+        <div class="buttonPlay">
+            <button class="buttonUp" id="buttonStart">Start game</button>
+            <button class="buttonDown" id="buttonReset">Play again</button>
+            <div class="target" id="targetIt">Target hit: 0/10</div>
+            <p class="control">Control: arrow left, arrow right & space</p>
+        </div>
+        <div>
+            <canvas id="game"></canvas>
+            <img id="source" src="assets/img/testpng.png" style="display: none;">
+        </div>
     </div>
-    <p class="control">Control: arrow left, arrow right & space</p>
-    <div class="buttonPlay">
+    </div>
+    <!-- <div class="buttonPlay">
         <button class="buttonUp" id="buttonStart">Start game</button>
         <button class="buttonDown" id="buttonReset">Play again</button>
         <div class="target" id="targetIt">Target hit: 0/10</div>
-    </div>
+    </div> -->
     <script src="assets/script.js"></script>
 </body>
 </html>
