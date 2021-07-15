@@ -16,11 +16,11 @@ header {
         font-size: 77px;  
         font-weight: 900;
         background-color: #E5383B;
-        box-shadow: 1px 1px 0px #c73133,
-                    2px 2px 0px #c73133,
-                    3px 3px 0px #c73133,
-                    4px 4px 0px #c73133,
-                    5px 5px 0px #c73133;
+        box-shadow: 0px 1px 0px #c73133,
+                    0px 2px 0px #c73133,
+                    0px 3px 0px #c73133,
+                    0px 4px 0px #c73133,
+                    0px 5px 0px #c73133;
         padding-top: 25px;
         height: 78px;
         // font-family: 'Niconne', cursive;
@@ -38,7 +38,7 @@ header {
                     11px 11px 0px #c73133,
                     12px 12px 0px #c73133,
                     13px 13px 0px #c73133,
-                }
+        }
         .copyright {
         text-decoration: none;
         color: white;
@@ -75,7 +75,7 @@ header {
         text-align: center;
         color: white;
         font-size: 17px;
-        text-shadow:1px 1px 0px rgb(173, 173, 173);  
+        text-shadow:1px 1px 0px rgb(39, 39, 39);  
     }
     .buttonUp {
         font-family: 'Orbitron', sans-serif;
@@ -117,7 +117,7 @@ header {
     }
     .target {
         color: white;
-        text-shadow:1px 1px 0px rgb(173, 173, 173);  
+        text-shadow:1px 1px 0px rgb(39, 39, 39);  
         text-align: center;
         border: unset;
         margin-top: 6%;
