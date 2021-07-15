@@ -79,8 +79,10 @@
 var canvas = document.getElementById("game");
 var ctx = canvas.getContext("2d");
 ctx.canvas.width  = window.innerWidth/1.5;
+console.log('canvas.width: ', canvas.width);
 ctx.canvas.height = window.innerHeight/1.5;
 var image = document.getElementById("source");
+var image2 = document.getElementById("source2");
 var ballRadius = 5;
 var x = canvas.width/2;
 var y = 525;
@@ -94,6 +96,9 @@ var leftPressed = false;
 var spacePressed = false;
 var yval = 550;
 var xval = (canvas.width/2) - 35;
+var yvalTarget = -70;
+var xvalTarget = (canvas.width-paddleWidth)/2; 
+// var xvalTarget = Math.floor(Math.random() * (canvas.width -100)) + 70; 
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -121,11 +126,13 @@ function keyUpHandler(e) {
     // }
 }
 
-
+function drawTarget() {
+    ctx.drawImage(image2, xvalTarget, yvalTarget, image.width = 70, image.height = 70);
+}
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y + 15, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "#c73133";
     ctx.fill();
     ctx.closePath();
 }
@@ -137,6 +144,7 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPaddle();
     drawBall();
+    collides();
     // document.addEventListener("keydown",(e) => {
     //     if(e.keycode === 32) {
     //         drawBall();
@@ -149,18 +157,34 @@ function draw() {
     else if(leftPressed && xval > 0) {
         xval -= 4;
     }
+    if(yvalTarget > canvas.height) {
+        clearInterval(inter);
+        alert("You lose");
+    }
     // else if(spacePressed) {
     //     drawBall();
     // }
     
     // x += dx;
     y += dy;
+    yvalTarget += 2;
 }
 
-setInterval(draw, 10);
+var inter = setInterval(draw, 10);
+var interTarget = setInterval(drawTarget, 10);
 
-
-
+function collides() {
+    if(xvalTarget < xval + 70 && xvalTarget + 70 > xval && yvalTarget < yval + 70 && 70 + yvalTarget > yval) { //target hit
+        clearInterval(inter);
+        alert("You lose");
+    }
+    if(xvalTarget < x + 10 && xvalTarget + 70 > x && yvalTarget < y + 10 && 70 + yvalTarget > y) { //shoot it
+        ctx.clearRect(xvalTarget, yvalTarget, image.width = 70, image.height = 70);
+        ctx.clearRect(x, y + 15, ballRadius, 0, Math.PI*2);
+        clearInterval(interTarget);
+        console.log("ta mere la commode");
+    }
+}
 
 // document.getElementById("buttonStart").addEventListener("click", () => {
 // })
