@@ -142,10 +142,10 @@ function drawTarget(a) {
     yvalTarget += 1 * difficulty;
 }
 
-var numTarget = 0;
+var numTarget;
 function drawProjectile() {
-    while(numTarget < arrayProjectile.length) {
-    // for(var numTarget = 0; numTarget < arrayProjectile.length; numTarget++){
+    // while(numTarget < arrayProjectile.length) {
+    for(numTarget = 0; numTarget < arrayProjectile.length; numTarget++){
         if(arrayTarget[target] < arrayProjectile[numTarget][0]+35 + 5 && arrayTarget[target] + 35 > arrayProjectile[numTarget][0]+35 && yvalTarget < arrayProjectile[numTarget][1] + 5 && 35 + yvalTarget > arrayProjectile[numTarget][1]) { //shoot hit
             ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
             arrayProjectile.splice(numTarget, 1);
@@ -166,7 +166,7 @@ function drawProjectile() {
                 arrayProjectile.splice(numTarget, 1);
             }
         }
-        numTarget++;
+        // numTarget++;
     }
 }
 
