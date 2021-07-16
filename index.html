@@ -22,13 +22,17 @@
         <div class="buttonPlay">
             <button class="buttonUp" id="buttonStart">Start game</button>
             <button class="buttonDown" id="buttonReset">Play again</button>
-            <div class="target" id="targetIt">Target hit: 0/10</div>
-            <p class="control">Control: arrow left, arrow right & space</p>
+            <div class="target" id="targetIt">Target hit: <span id="score" class="score">0</span>/10</div>
+            <button class="buttonDiff" id="buttonDifficulty">Difficulty</button>
+            <button class="buttonTheme" id="buttonTheme">Theme</button>
+            <p class="timer">Time :</p>
+            <p class="control">Control: arrow left, arrow right & arrow up</p>
         </div>
         <div>
-            <canvas id="game"></canvas>
-            <img id="source" src="assets/img/testpng.png" style="display: none;">
-            <img id="source2" src="assets/img/target.png" style="display: none;">
+            <p class="winLose" id="winLose"></p>
+            <canvas id="game" class="canvas"></canvas>
+            <img id="source" src="assets/img/testpng-removebg-preview.png" style="display: none;">
+            <img id="source2" src="assets/img/target (1).png" style="display: none;">
         </div>
     </div>
     </div>
