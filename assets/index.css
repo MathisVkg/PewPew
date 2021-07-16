@@ -51,16 +51,18 @@ header .copyright:hover {
 }
 
 .container .canvas {
-  background-image: url();
+  background-color: white;
   -webkit-box-shadow: 2px 2px 7px #E5383B;
           box-shadow: 2px 2px 7px #E5383B;
   border-radius: 5px;
 }
 
 .container .theme1 {
-  background-color: #be2a2a;
-  -webkit-box-shadow: 2px 2px 7px #E5383B;
-          box-shadow: 2px 2px 7px #E5383B;
+  background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme1.jpg?raw=true");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: 2px 2px 7px #16d4ab;
+          box-shadow: 2px 2px 7px #16d4ab;
   border-radius: 5px;
 }
 

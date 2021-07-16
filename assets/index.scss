@@ -57,15 +57,16 @@ header {
     align-items: flex-start;
     margin-top: 2%;
     .canvas {
-        // background-color: rgb(130, 168, 226);
-        // background-color: rgb(246, 246, 246);
-        background-image: url();
+        background-color: rgb(255, 255, 255);
         box-shadow: 2px 2px 7px #E5383B;
         border-radius: 5px;
     }
     .theme1 {
-        background-color: rgb(190, 42, 42);
-        box-shadow: 2px 2px 7px #E5383B;
+        // background-color: rgb(190, 42, 42);
+        background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme1.jpg?raw=true");
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 2px 2px 7px #16d4ab;
         border-radius: 5px;
     }
     .theme2 {
