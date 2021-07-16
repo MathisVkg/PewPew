@@ -27,6 +27,9 @@ var paddleHeight = 10;
 var paddleWidth = 75;
 var difficulty = 0;
 var theme = 0;
+var timer = 0;
+var minutes = 0;
+var numberTarget = 100;
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -38,9 +41,11 @@ document.addEventListener("keydown", function setProjectile(event) {
 
 document.getElementById("buttonStart").addEventListener("click", () => {
     if(difficulty === 0) {
-        alert("Choice your difficulty !")
+        document.getElementById("winLose").innerHTML = "Choice your difficulty !";
+        // alert("Choice your difficulty !")
     }
     else {
+        document.getElementById("winLose").innerHTML = "";
         if (start) {
             document.getElementById("buttonStart").innerHTML = "Start game";
             clearInterval(inter);
@@ -103,7 +108,7 @@ document.getElementById("buttonTheme").addEventListener("click", () => {
 });
 
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < numberTarget; i++) {
     arrayTarget.push(Math.floor(Math.random() * (canvas.width -35)))
 }
 
@@ -137,7 +142,7 @@ function drawTarget(a) {
 
 function drawProjectile() {
     for (let i = 0; i < arrayProjectile.length; i++) {
-        if(arrayTarget[target] < arrayProjectile[i][0]+35 + 10 && arrayTarget[target] + 35 > arrayProjectile[i][0]+35 && yvalTarget < arrayProjectile[i][1] + 10 && 35 + yvalTarget > arrayProjectile[i][1]) { //shoot hit
+        if(arrayTarget[target] < arrayProjectile[i][0]+35 + 5 && arrayTarget[target] + 35 > arrayProjectile[i][0]+35 && yvalTarget < arrayProjectile[i][1] + 5 && 35 + yvalTarget > arrayProjectile[i][1]) { //shoot hit
             ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
             arrayProjectile.splice(i, 1);
             score++;
@@ -147,7 +152,8 @@ function drawProjectile() {
         }
         if (arrayProjectile.length > 0) {
             ctx.beginPath();
-            ctx.arc(arrayProjectile[i][0]+35, arrayProjectile[i][1] + 15, ballRadius, 0, Math.PI*2);
+            ctx.rect(arrayProjectile[i][0]+35, arrayProjectile[i][1] + 15, 5, 5);
+            // ctx.arc(arrayProjectile[i][0]+35, arrayProjectile[i][1] + 15, ballRadius, 0, Math.PI*2);
             ctx.fillStyle = "#c73133";
             ctx.fill();
             ctx.closePath();
@@ -177,11 +183,13 @@ function collides() {
 
 function logScore() {
     document.getElementById("score").innerHTML = score;
+    document.getElementById("numberTargetos").innerHTML = "/" + numberTarget;
 }
 
 function win() {
-    if (score == 10) {
+    if (score == 100) {
         clearInterval(inter);
+        clearInterval(interTimer);
         document.getElementById("winLose").innerHTML = "You win !";
         document.getElementById("game").setAttribute("style", "opacity: 0.5");
         // alert("You win!");
@@ -196,10 +204,25 @@ function draw(){
     collides();
     logScore();
     win();
+    if(timer < 10) {
+        document.getElementById("gameTime").innerHTML = "0" + minutes + " : " + 0 + timer;
+    }
+    else {
+        document.getElementById("gameTime").innerHTML = "0" + minutes + " : " + timer;
+    }
+    if(timer === 60) {
+        timer = 0;
+        minutes += 1;
+    } 
     if(rightPressed && xval < canvas.width-paddleWidth) {
         xval += 4;
     }
     else if(leftPressed && xval > 0) {
         xval -= 4;
     }
+}
+
+var interTimer = setInterval(timerScore, 1000);
+function timerScore() {
+    timer++;
 }
