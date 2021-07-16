@@ -51,7 +51,7 @@ header .copyright:hover {
 }
 
 .container .canvas {
-  background-color: white;
+  background-color: #dfdfdf;
   -webkit-box-shadow: 2px 2px 7px #E5383B;
           box-shadow: 2px 2px 7px #E5383B;
   border-radius: 5px;
@@ -105,6 +105,13 @@ header .copyright:hover {
   margin-right: 2%;
   width: 220px;
   font-size: 15px;
+  margin-top: 2%;
+}
+
+.buttonPlay .timer {
+  margin-top: 15%;
+  text-align: center;
+  color: white;
 }
 
 .buttonPlay .control {
