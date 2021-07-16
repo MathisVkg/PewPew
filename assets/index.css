@@ -91,6 +91,47 @@ header .copyright:hover {
   text-shadow: 1px 1px 0px #dfdfdf, 2px 2px 0px #dfdfdf, 3px 3px 0px #dfdfdf, 4px 4px 0px #dfdfdf;
 }
 
+.liveFlex {
+  margin-left: 15px;
+  margin-top: 10%;
+}
+
+.liveFlex .heartClass {
+  width: 50px;
+  height: auto;
+  margin-left: 5px;
+  -webkit-animation-name: heartrotate;
+          animation-name: heartrotate;
+  -webkit-animation-duration: 4000ms;
+          animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes heartrotate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+@keyframes heartrotate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 .buttonPlay {
   display: -webkit-box;
   display: -ms-flexbox;

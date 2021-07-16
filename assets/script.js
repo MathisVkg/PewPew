@@ -29,7 +29,9 @@ var difficulty = 0;
 var theme = 0;
 var timer = 0;
 var minutes = 0;
-var numberTarget = 100;
+var numberTarget = 20;
+var live = 3;
+
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -140,11 +142,13 @@ function drawTarget(a) {
     yvalTarget += 1 * difficulty;
 }
 
+var numTarget = 0;
 function drawProjectile() {
-    for (let i = 0; i < arrayProjectile.length; i++) {
-        if(arrayTarget[target] < arrayProjectile[i][0]+35 + 5 && arrayTarget[target] + 35 > arrayProjectile[i][0]+35 && yvalTarget < arrayProjectile[i][1] + 5 && 35 + yvalTarget > arrayProjectile[i][1]) { //shoot hit
+    while(numTarget < arrayProjectile.length) {
+    // for(var numTarget = 0; numTarget < arrayProjectile.length; numTarget++){
+        if(arrayTarget[target] < arrayProjectile[numTarget][0]+35 + 5 && arrayTarget[target] + 35 > arrayProjectile[numTarget][0]+35 && yvalTarget < arrayProjectile[numTarget][1] + 5 && 35 + yvalTarget > arrayProjectile[numTarget][1]) { //shoot hit
             ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
-            arrayProjectile.splice(i, 1);
+            arrayProjectile.splice(numTarget, 1);
             score++;
             yvalTarget = -35;
             target++;
@@ -152,32 +156,60 @@ function drawProjectile() {
         }
         if (arrayProjectile.length > 0) {
             ctx.beginPath();
-            ctx.rect(arrayProjectile[i][0]+35, arrayProjectile[i][1] + 15, 5, 5);
+            ctx.rect(arrayProjectile[numTarget][0]+35, arrayProjectile[numTarget][1] + 15, 5, 5);
             // ctx.arc(arrayProjectile[i][0]+35, arrayProjectile[i][1] + 15, ballRadius, 0, Math.PI*2);
             ctx.fillStyle = "#c73133";
             ctx.fill();
             ctx.closePath();
-            arrayProjectile[i][1] = (arrayProjectile[i][1] + dy);
-
-            if (arrayProjectile[i][1] < 0) {
-                arrayProjectile.splice(i, 1);
+            arrayProjectile[numTarget][1] = (arrayProjectile[numTarget][1] + dy);
+            if (arrayProjectile[numTarget][1] < 0) {
+                arrayProjectile.splice(numTarget, 1);
             }
         }
+        numTarget++;
     }
 }
 
+
+
 function collides() {
     if(arrayTarget[target] < xval + 35 && arrayTarget[target] + 70 > xval && yvalTarget < yval + 70 && 35 + yvalTarget > yval) { //target hit
-        clearInterval(inter);
-        document.getElementById("winLose").innerHTML = "You Lose !";
-        document.getElementById("game").setAttribute("style", "opacity: 0.5");
-        // alert("You lose");
+        ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
+        arrayProjectile.splice(numTarget, 1);
+        yvalTarget = -35;
+        target++;
+        drawTarget(arrayTarget[target]);
+        live--;
+        checkLive();
+        // clearInterval(inter);
+        // document.getElementById("winLose").innerHTML = "You Lose !";
+        // document.getElementById("game").setAttribute("style", "opacity: 0.5");
     }
     if(yvalTarget > canvas.height) {
+        ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
+        arrayProjectile.splice(numTarget, 1);
+        yvalTarget = -35;
+        target++;
+        drawTarget(arrayTarget[target]);
+        live--;
+        checkLive();
+        // clearInterval(inter);
+        // document.getElementById("winLose").innerHTML = "You Lose !";
+        // document.getElementById("game").setAttribute("style", "opacity: 0.5");
+    }
+}
+function checkLive() {
+    if(live === 2 ){
+    document.getElementById("live3").setAttribute("style", "display: none");
+    }
+    else if(live === 1 ){
+        document.getElementById("live2").setAttribute("style", "display: none");
+    }
+    else if(live === 0) {
         clearInterval(inter);
         document.getElementById("winLose").innerHTML = "You Lose !";
         document.getElementById("game").setAttribute("style", "opacity: 0.5");
-        // alert("You lose 1");
+        document.getElementById("live").setAttribute("style", "display: none");
     }
 }
 
@@ -187,7 +219,7 @@ function logScore() {
 }
 
 function win() {
-    if (score == 100) {
+    if (score === numberTarget) {
         clearInterval(inter);
         clearInterval(interTimer);
         document.getElementById("winLose").innerHTML = "You win !";
