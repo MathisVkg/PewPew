@@ -48,7 +48,7 @@ Theyre you go, you can start coding your website, use either **VIM** or a **IDE*
 
 ## Versions
 
-**Latest version :** [Cliquer pour afficher](https://github.com/Giuseppemoi/restaurant-css-framework/releases/tag/v1.0)
+**Latest version :** [Cliquer pour afficher](https://github.com/MathisVkg/PewPew/releases/tag/2.0)
 
 ## Authors 
 
