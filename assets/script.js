@@ -29,7 +29,7 @@ var difficulty = 0;
 var theme = 0;
 var timer = 0;
 var minutes = 0;
-var numberTarget = 20;
+var numberTarget = 25;
 var live = 3;
 
 
@@ -115,6 +115,7 @@ for (let i = 0; i < numberTarget; i++) {
 }
 
 
+
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
@@ -173,7 +174,7 @@ function drawProjectile() {
 
 
 function collides() {
-    if(arrayTarget[target] < xval + 35 && arrayTarget[target] + 70 > xval && yvalTarget < yval + 70 && 35 + yvalTarget > yval) { //target hit
+    if(arrayTarget[target] < xval + 70 && arrayTarget[target] + 35 > xval && yvalTarget < yval + 70 && 35 + yvalTarget > yval) { //target hit
         ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
         arrayProjectile.splice(numTarget, 1);
         yvalTarget = -35;
@@ -191,8 +192,6 @@ function collides() {
         yvalTarget = -35;
         target++;
         drawTarget(arrayTarget[target]);
-        live--;
-        checkLive();
         // clearInterval(inter);
         // document.getElementById("winLose").innerHTML = "You Lose !";
         // document.getElementById("game").setAttribute("style", "opacity: 0.5");
@@ -247,10 +246,10 @@ function draw(){
         minutes += 1;
     } 
     if(rightPressed && xval < canvas.width-paddleWidth) {
-        xval += 4;
+        xval += 6;
     }
     else if(leftPressed && xval > 0) {
-        xval -= 4;
+        xval -= 6;
     }
 }
 
