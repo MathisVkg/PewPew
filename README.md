@@ -7,7 +7,7 @@
 
 ## See the project
 
-- <a href="https://giuseppemoi.github.io/restaurant-css-framework/index.html" target="_blank">Pew Pew</a>
+- <a href="https://mathisvkg.github.io/PewPew/" target="_blank">Pew Pew</a>
 
 ## Technical requirements for our website
 
