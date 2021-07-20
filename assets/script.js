@@ -11,7 +11,7 @@ var score = 0
 var start = false;
 var inter;
 var arrayProjectile = [];
-var yval = 550;
+var yval = (canvas.height) - 65;
 var xval = (canvas.width/2) - 35;
 var yvalTarget = -35;
 var xvalTarget = (canvas.width/2);
@@ -31,6 +31,7 @@ var timer = 0;
 var minutes = 0;
 var numberTarget = 25;
 var live = 3;
+console.log(canvas.height);
 
 
 document.addEventListener("keydown", keyDownHandler, false);
