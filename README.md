@@ -23,7 +23,9 @@ Added last bonus features.
 * [JavaScript] - Js
 * [Canvas] - Dynamic renderings of images
 
+## Snapshot
 
+![image](assets/img/snapshit.jpg)
 
 ## Authors 
 
