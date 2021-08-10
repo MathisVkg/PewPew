@@ -21,11 +21,9 @@ Added last bonus features.
 * [Visual Studio Code] - IDE
 * [Gitbash] - GUI Clients
 * [JavaScript] - Js
-* Canvas - Dynamic renderings of images
+* [Canvas] - Dynamic renderings of images
 
-## Versions
 
-**Latest version :** [Cliquer pour afficher](https://github.com/MathisVkg/PewPew/releases/tag/2.0)
 
 ## Authors 
 
