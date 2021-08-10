@@ -31,7 +31,6 @@ var timer = 0;
 var minutes = 0;
 var numberTarget = 25;
 var live = 3;
-console.log(canvas.height);
 
 
 document.addEventListener("keydown", keyDownHandler, false);
@@ -45,7 +44,6 @@ document.addEventListener("keydown", function setProjectile(event) {
 document.getElementById("buttonStart").addEventListener("click", () => {
     if(difficulty === 0) {
         document.getElementById("winLose").innerHTML = "Choice your difficulty !";
-        // alert("Choice your difficulty !")
     }
     else {
         document.getElementById("winLose").innerHTML = "";
@@ -183,9 +181,6 @@ function collides() {
         drawTarget(arrayTarget[target]);
         live--;
         checkLive();
-        // clearInterval(inter);
-        // document.getElementById("winLose").innerHTML = "You Lose !";
-        // document.getElementById("game").setAttribute("style", "opacity: 0.5");
     }
     if(yvalTarget > canvas.height) {
         ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
@@ -193,9 +188,6 @@ function collides() {
         yvalTarget = -35;
         target++;
         drawTarget(arrayTarget[target]);
-        // clearInterval(inter);
-        // document.getElementById("winLose").innerHTML = "You Lose !";
-        // document.getElementById("game").setAttribute("style", "opacity: 0.5");
     }
 }
 function checkLive() {
@@ -224,7 +216,6 @@ function win() {
         clearInterval(interTimer);
         document.getElementById("winLose").innerHTML = "You win !";
         document.getElementById("game").setAttribute("style", "opacity: 0.5");
-        // alert("You win!");
     }
 }
 

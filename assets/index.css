@@ -2,6 +2,7 @@ body {
   background-color: #161A1D;
   font-family: 'Orbitron', sans-serif;
   margin: 0;
+  margin-bottom: 5%;
 }
 
 header {
@@ -16,8 +17,8 @@ header h1 {
   font-size: 77px;
   font-weight: 900;
   background-color: #E5383B;
-  -webkit-box-shadow: 0px 1px 0px #c73133, 0px 2px 0px #c73133, 0px 3px 0px #c73133, 0px 4px 0px #c73133, 0px 5px 0px #c73133;
-          box-shadow: 0px 1px 0px #c73133, 0px 2px 0px #c73133, 0px 3px 0px #c73133, 0px 4px 0px #c73133, 0px 5px 0px #c73133;
+  -webkit-box-shadow: 0px 1px 0px #c73133, 0px 2px 0px #c73133, 0px 3px 0px #c73133, 0px 4px 0px #c73133, 0px 5px 0px #c73133;
+          box-shadow: 0px 1px 0px #c73133, 0px 2px 0px #c73133, 0px 3px 0px #c73133, 0px 4px 0px #c73133, 0px 5px 0px #c73133;
   padding-top: 25px;
   height: 78px;
   font-family: 'Orbitron', sans-serif;
@@ -58,7 +59,7 @@ header .copyright:hover {
 }
 
 .container .theme1 {
-  background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme1.jpg?raw=true");
+  background-image: url("img/theme1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-shadow: 2px 2px 7px #16d4ab;
@@ -67,7 +68,7 @@ header .copyright:hover {
 }
 
 .container .theme2 {
-  background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme2.jpg?raw=true");
+  background-image: url("img/theme2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-shadow: 2px 2px 7px #f08724;
@@ -76,7 +77,7 @@ header .copyright:hover {
 }
 
 .container .theme3 {
-  background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme3.jpg?raw=true");
+  background-image: url("img/theme3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-shadow: 2px 2px 7px #b8163e;
@@ -172,8 +173,8 @@ header .copyright:hover {
   text-shadow: 1px 1px 0px #adadad;
   border: unset;
   background-color: #E5383B;
-  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
-          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
   font-size: 15px;
   padding: 12px;
   border-radius: 5px;
@@ -192,8 +193,8 @@ header .copyright:hover {
   text-shadow: 1px 1px 0px #adadad;
   border: unset;
   background-color: #E5383B;
-  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
-          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
   font-size: 15px;
   margin-top: 8%;
   padding: 12px;
@@ -213,8 +214,8 @@ header .copyright:hover {
   text-shadow: 1px 1px 0px #adadad;
   border: unset;
   background-color: #E5383B;
-  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
-          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
   font-size: 15px;
   margin-top: 8%;
   padding: 12px;
@@ -234,8 +235,8 @@ header .copyright:hover {
   text-shadow: 1px 1px 0px #adadad;
   border: unset;
   background-color: #E5383B;
-  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
-          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+  -webkit-box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
+          box-shadow: 1px 1px 0px #c73133, 2px 2px 0px #c73133, 3px 3px 0px #c73133, 4px 4px 0px #c73133, 5px 5px 0px #c73133;
   font-size: 15px;
   margin-top: 8%;
   padding: 12px;

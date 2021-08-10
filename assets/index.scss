@@ -3,6 +3,7 @@ body {
     background-color: #161A1D;
     font-family: 'Orbitron', sans-serif;
     margin: 0;
+    margin-bottom: 5%;
 }
 
 
@@ -23,7 +24,6 @@ header {
                     0px 5px 0px #c73133;
         padding-top: 25px;
         height: 78px;
-        // font-family: 'Niconne', cursive;
         font-family: 'Orbitron', sans-serif;
         text-shadow:1px 1px 0px rgb(223, 223, 223),
                     2px 2px 0px rgb(223, 223, 223),
@@ -62,22 +62,21 @@ header {
         border-radius: 5px;
     }
     .theme1 {
-        // background-color: rgb(190, 42, 42);
-        background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme1.jpg?raw=true");
+        background-image: url("img/theme1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 7px #16d4ab;
         border-radius: 5px;
     }
     .theme2 {
-        background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme2.jpg?raw=true");
+        background-image: url("img/theme2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 7px #f08724;
         border-radius: 5px;
     }
     .theme3 {
-        background-image: url("https://github.com/MathisVkg/PewPew/blob/main/assets/img/theme3.jpg?raw=true");
+        background-image: url("img/theme3.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         box-shadow: 2px 2px 7px #b8163e;
@@ -91,8 +90,6 @@ header {
                     2px 2px 0px rgb(223, 223, 223),
                     3px 3px 0px rgb(223, 223, 223),
                     4px 4px 0px rgb(223, 223, 223);
-                    // 5px 5px 0px rgb(223, 223, 223),
-                    // 6px 6px 0px rgb(223, 223, 223);
     }
 }
 
@@ -225,7 +222,5 @@ header {
         padding: 12px;
         border-radius: 5px;
         transition: 0.5s ease-in-out;
-        // background-color: #E5383B;
-        // box-shadow: inset -3px -3px 8px #BA181B;
     }
 }
