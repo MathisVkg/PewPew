@@ -25,7 +25,7 @@ Added last bonus features.
 
 ## Snapshot
 
-![image](assets/img/snapshit.jpg)
+![image](https://github.com/MathisVkg/PewPew/blob/main/assets/img/snapshot.png)
 
 ## Authors 
 
