@@ -31,10 +31,13 @@ var timer = 0;
 var minutes = 0;
 var numberTarget = 25;
 var live = 3;
+var numTarget;
+var interTimer = setInterval(timerScore, 1000);
 
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+// check keyboard press and push a projectile in a array
 document.addEventListener("keydown", function setProjectile(event) {
     if(event.code === "ArrowUp") {
         arrayProjectile.push([xval, y]);
@@ -58,8 +61,6 @@ document.getElementById("buttonStart").addEventListener("click", () => {
         }
         if(start === true) {
             document.getElementById("buttonDifficulty").disabled = true;
-        }
-        if(start === true) {
             document.getElementById("buttonTheme").disabled = true;
         }
     }
@@ -70,41 +71,45 @@ document.getElementById("buttonReset").addEventListener("click", () => {
 
 document.getElementById("buttonDifficulty").addEventListener("click", () => {
     difficulty++;
-    if(difficulty === 1) {
-        document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Easy";
-    }
-    else if(difficulty === 2) {
-        document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Medium";
-    }
-    else if(difficulty === 3) {
-        document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Hard";
-    }
-    else if(difficulty === 4) {
-        document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Extrem";
-    }
-    else if(difficulty === 5) {
-        difficulty = 1;
-        document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Easy";
+    switch (difficulty) {
+        case 1:
+            document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Easy";
+            break;
+        case 2:
+            document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Medium";
+            break;
+        case 3:
+            document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Hard";
+            break;
+        case 4:
+            document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Extrem";
+            break;
+        case 5:
+            difficulty = 1;
+            document.getElementById("buttonDifficulty").innerHTML = "Difficulty: Easy";
+            break;
     }
 });
 document.getElementById("buttonTheme").addEventListener("click", () => {
     theme++;
-    if(theme === 1) {
-        document.getElementById("game").removeAttribute("class");
-        document.getElementById("game").setAttribute("class", "theme1");
-    }
-    else if(theme === 2) {
-        document.getElementById("game").removeAttribute("class");
-        document.getElementById("game").setAttribute("class", "theme2");
-    }
-    else if(theme === 3) {
-        document.getElementById("game").removeAttribute("class");
-        document.getElementById("game").setAttribute("class", "theme3");
-    }
-    else if(theme === 4) {
-        theme = 1;
-        document.getElementById("game").removeAttribute("class");
-        document.getElementById("game").setAttribute("class", "theme1");
+    switch (theme) {
+        case 1:
+            document.getElementById("game").removeAttribute("class");
+            document.getElementById("game").setAttribute("class", "theme1");
+            break;
+        case 2:
+            document.getElementById("game").removeAttribute("class");
+            document.getElementById("game").setAttribute("class", "theme2");
+            break;
+        case 3:
+            document.getElementById("game").removeAttribute("class");
+            document.getElementById("game").setAttribute("class", "theme3");
+            break;
+        case 4:
+            theme = 1;
+            document.getElementById("game").removeAttribute("class");
+            document.getElementById("game").setAttribute("class", "theme1");
+            break;
     }
 });
 
@@ -114,7 +119,7 @@ for (let i = 0; i < numberTarget; i++) {
 }
 
 
-
+// check player keyboard press
 function keyDownHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = true;
@@ -124,6 +129,7 @@ function keyDownHandler(e) {
     }
 }
 
+// check player keyboard press
 function keyUpHandler(e) {
     if(e.keyCode == 39) {
         rightPressed = false;
@@ -133,20 +139,21 @@ function keyUpHandler(e) {
     }
 }
 
+// draw ship of player
 function drawPaddle() {
     ctx.drawImage(img, xval, yval, img.width = 70, img.height = 70);
 }
 
+// draw target for player, target speed is multy by difficulty
 function drawTarget(a) {
     ctx.drawImage(image2, a, yvalTarget, image2.width = 35, image2.height = 35);
     yvalTarget += 1 * difficulty;
 }
 
-var numTarget;
+// draw projectile shoot by ship and stock in a array
 function drawProjectile() {
-    // while(numTarget < arrayProjectile.length) {
     for(numTarget = 0; numTarget < arrayProjectile.length; numTarget++){
-        if(arrayTarget[target] < arrayProjectile[numTarget][0]+35 + 5 && arrayTarget[target] + 35 > arrayProjectile[numTarget][0]+35 && yvalTarget < arrayProjectile[numTarget][1] + 5 && 35 + yvalTarget > arrayProjectile[numTarget][1]) { //shoot hit
+        if(arrayTarget[target] < arrayProjectile[numTarget][0]+ 35 + 5 && arrayTarget[target] + 35 > arrayProjectile[numTarget][0]+35 && yvalTarget < arrayProjectile[numTarget][1] + 5 && 35 + yvalTarget > arrayProjectile[numTarget][1]) { //shoot hit
             ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
             arrayProjectile.splice(numTarget, 1);
             score++;
@@ -157,7 +164,6 @@ function drawProjectile() {
         if (arrayProjectile.length > 0) {
             ctx.beginPath();
             ctx.rect(arrayProjectile[numTarget][0]+35, arrayProjectile[numTarget][1] + 15, 5, 5);
-            // ctx.arc(arrayProjectile[i][0]+35, arrayProjectile[i][1] + 15, ballRadius, 0, Math.PI*2);
             ctx.fillStyle = "#c73133";
             ctx.fill();
             ctx.closePath();
@@ -166,12 +172,14 @@ function drawProjectile() {
                 arrayProjectile.splice(numTarget, 1);
             }
         }
-        // numTarget++;
     }
 }
 
 
-
+// check if projectile it something
+// if porjectile it target, another target is draw and projectile is remove from array
+// and player loose a live
+// if projectile it end of canvas, projectile is remove or array
 function collides() {
     if(arrayTarget[target] < xval + 70 && arrayTarget[target] + 35 > xval && yvalTarget < yval + 70 && 35 + yvalTarget > yval) { //target hit
         ctx.clearRect(arrayTarget[target], yvalTarget, image2.width = 70, image2.height = 70);
@@ -190,18 +198,22 @@ function collides() {
         drawTarget(arrayTarget[target]);
     }
 }
+
+// check live of player and display it
 function checkLive() {
-    if(live === 2 ){
-    document.getElementById("live3").setAttribute("style", "display: none");
-    }
-    else if(live === 1 ){
-        document.getElementById("live2").setAttribute("style", "display: none");
-    }
-    else if(live === 0) {
-        clearInterval(inter);
-        document.getElementById("winLose").innerHTML = "You Lose !";
-        document.getElementById("game").setAttribute("style", "opacity: 0.5");
-        document.getElementById("live").setAttribute("style", "display: none");
+    switch (live) {
+        case 2:
+            document.getElementById("live3").setAttribute("style", "display: none");
+            break;
+        case 1:
+            document.getElementById("live2").setAttribute("style", "display: none");
+            break;
+        case 0:
+            clearInterval(inter);
+            document.getElementById("game").setAttribute("style", "opacity: 0.5");
+            document.getElementById("live").setAttribute("style", "display: none");
+            document.getElementById("winLose").innerHTML = "You Lose !";
+            break;
     }
 }
 
@@ -219,6 +231,8 @@ function win() {
     }
 }
 
+
+// main function check call all other function for the game
 function draw(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawTarget(arrayTarget[target]);
@@ -245,7 +259,6 @@ function draw(){
     }
 }
 
-var interTimer = setInterval(timerScore, 1000);
 function timerScore() {
     timer++;
 }
